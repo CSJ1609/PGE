@@ -1,0 +1,35 @@
+﻿<Window x:Class="Ejercicio9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Visor de Archivos de Texto" Height="450" Width="800">
+    <Grid Background="#FF00FFA3">
+
+        <!-- Botón para cargar archivo -->
+        <Button x:Name="btnCargar" Content="Cargar Archivo"
+                HorizontalAlignment="Left" Margin="30,20,0,0"
+                VerticalAlignment="Top" Height="40" Width="150"
+                FontSize="16" Click="btnCargar_Click"/>
+
+        <!-- Botón aumentar fuente -->
+        <Button x:Name="btnAumentar" Content="Aumentar Letra"
+                HorizontalAlignment="Left" Margin="200,20,0,0"
+                VerticalAlignment="Top" Height="40" Width="150"
+                FontSize="16" Click="btnAumentar_Click"/>
+
+        <!-- Botón disminuir fuente -->
+        <Button x:Name="btnDisminuir" Content="Disminuir Letra"
+                HorizontalAlignment="Left" Margin="370,20,0,0"
+                VerticalAlignment="Top" Height="40" Width="150"
+                FontSize="16" Click="btnDisminuir_Click"/>
+
+        <!-- ScrollViewer con el texto -->
+        <ScrollViewer Margin="30,80,30,20" Background="White">
+            <TextBlock x:Name="txtContenido"
+                       Text="Aquí se mostrará el contenido del archivo..."
+                       TextWrapping="Wrap" FontSize="16"
+                       Foreground="Black"/>
+        </ScrollViewer>
+
+    </Grid>
+</Window>
+

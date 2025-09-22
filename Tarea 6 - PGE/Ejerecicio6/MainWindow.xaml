@@ -1,0 +1,39 @@
+﻿<Window x:Class="Ejerecicio6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CONVERSIÓN DE DIVISAS" Height="450" Width="800">
+    <Grid Margin="20">
+
+        <!-- Ingreso de monto -->
+        <TextBlock Text="Monto:" FontSize="16" Margin="10,10,0,0"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtMonto" Width="150" Height="30" 
+                 Margin="100,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 FontSize="16"/>
+
+        <!-- ComboBox Moneda Origen -->
+        <TextBlock Text="De:" FontSize="16" Margin="10,60,0,0"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboOrigen" Width="150" Height="30"
+                  Margin="100,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                  FontSize="16"/>
+
+        <!-- ComboBox Moneda Destino -->
+        <TextBlock Text="A:" FontSize="16" Margin="10,110,0,0"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboDestino" Width="150" Height="30"
+                  Margin="100,110,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                  FontSize="16"/>
+
+        <!-- Botón convertir -->
+        <Button x:Name="btnConvertir" Content="Convertir"
+                Width="150" Height="40" FontSize="16"
+                Margin="10,170,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Click="btnConvertir_Click"/>
+
+        <!-- Resultado -->
+        <TextBlock x:Name="lblResultado" Text="Resultado: "
+                   FontSize="18" FontWeight="Bold"
+                   Margin="10,230,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="Ejercicio4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio4"
+        mc:Ignorable="d"
+        Title="VISUALIZACIÓN DE DATOS " Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="217" Height="57"/>
+        <Button x:Name="button" Content="Actualizar"
+        Click="button_Click"
+        HorizontalAlignment="Left" Margin="360,23,0,0"
+        VerticalAlignment="Top" Height="68" Width="217" FontSize="20"/>
+
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="213"
+        Margin="24,0,0,0" VerticalAlignment="Center" Width="376"
+        Background="#FF77B0EB"/>
+
+        <ListBox x:Name="listBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="448,151,98,143" FontSize="18"/>
+
+    </Grid>
+</Window>

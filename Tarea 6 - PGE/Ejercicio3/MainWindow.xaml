@@ -1,0 +1,74 @@
+﻿<Window x:Class="Ejercicio3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio3"
+        mc:Ignorable="d"
+        Title="Registro de Gastos" Height="659" Width="1056">
+
+    <Grid Background="#FF66A6D1">
+
+        <!-- Descripción -->
+        <TextBox x:Name="textBox"
+                 HorizontalAlignment="Left" Height="159"
+                 Margin="10,42,0,0" VerticalAlignment="Top"
+                 Width="462" FontSize="20"
+                 Text="Descripcion del producto...."/>
+
+        <!-- Valor -->
+        <TextBox x:Name="textBox_Copiar"
+                 HorizontalAlignment="Left" Height="42"
+                 Margin="494,42,0,0" VerticalAlignment="Top"
+                 Width="233" FontSize="20"
+                 Text="Ingrese el gasto..."/>
+
+        <!-- Moneda -->
+        <ComboBox x:Name="comboBox"
+                  HorizontalAlignment="Left" Height="59"
+                  Margin="494,89,0,0" VerticalAlignment="Top"
+                  Width="233"/>
+
+        <!-- Lista de gastos -->
+        <DataGrid x:Name="dataGrid"
+                  Margin="87,255,176,90"
+                  FontSize="16"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Descripción" Binding="{Binding Descripcion}" Width="*"/>
+                <DataGridTextColumn Header="Valor" Binding="{Binding Valor}" Width="120"/>
+                <DataGridTextColumn Header="Moneda" Binding="{Binding Moneda}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Botón agregar gasto -->
+        <Button x:Name="button"
+                Content="Gasto de la lista"
+                HorizontalAlignment="Left"
+                Margin="87,570,0,0"
+                VerticalAlignment="Top"
+                Height="63" Width="209"
+                FontSize="20"/>
+
+        <!-- Botón conversión -->
+        <Button x:Name="button1"
+                Content="Conversión"
+                HorizontalAlignment="Left"
+                Margin="494,177,0,0"
+                VerticalAlignment="Top"
+                Height="69" Width="201"
+                FontSize="20"/>
+
+        <!-- Total convertido -->
+        <TextBox x:Name="textBox1"
+                 HorizontalAlignment="Left"
+                 Margin="781,177,0,0"
+                 VerticalAlignment="Top"
+                 Width="198" Height="73"
+                 FontSize="20"
+                 IsReadOnly="True"/>
+
+    </Grid>
+</Window>
+

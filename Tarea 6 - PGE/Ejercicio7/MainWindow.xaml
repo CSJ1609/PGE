@@ -1,0 +1,33 @@
+﻿<Window x:Class="Ejercicio7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Juego de Adivinanza" Height="450" Width="800">
+    <Grid Background="#FFD496FF">
+
+        <!-- Caja para ingresar el número -->
+        <TextBox x:Name="txtIntento"
+                 HorizontalAlignment="Left" Height="48" Width="130"
+                 Margin="36,35,0,0" VerticalAlignment="Top"
+                 FontSize="20" />
+
+        <!-- Botón para adivinar -->
+        <Button x:Name="btnAdivinar" Content="Adivinar"
+                HorizontalAlignment="Left" Height="63" Width="130"
+                Margin="36,100,0,0" VerticalAlignment="Top"
+                FontSize="20"
+                Click="btnAdivinar_Click"/>
+
+        <!-- Label para mostrar mensajes -->
+        <Label x:Name="lblMensaje" Content="Ingresa un número del 1 al 100"
+               HorizontalAlignment="Left" Margin="36,180,0,0"
+               VerticalAlignment="Top" FontSize="20" />
+
+        <!-- Botón para reiniciar -->
+        <Button x:Name="btnReiniciar" Content="Reiniciar Juego"
+                HorizontalAlignment="Left" Height="63" Width="180"
+                Margin="36,250,0,0" VerticalAlignment="Top"
+                FontSize="20"
+                Click="btnReiniciar_Click"/>
+    </Grid>
+</Window>
+

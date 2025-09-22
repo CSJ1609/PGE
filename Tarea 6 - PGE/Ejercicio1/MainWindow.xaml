@@ -1,0 +1,48 @@
+﻿<Window x:Class="Ejercicio1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio1"
+        mc:Ignorable="d"
+        Title="Conversor de Temperatura" Height="250" Width="400">
+
+    <Grid Background="#FF00DFFF">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+
+            <!-- Título -->
+            <Label Content="Convertidor de grados C° a F°" 
+                   FontSize="18" 
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+            <!-- Entrada Celsius -->
+            <Label Content="Grados C°" FontSize="14" HorizontalAlignment="Left" Margin="0,0,0,5"/>
+            <TextBox x:Name="textBox" 
+                     Width="180" Height="30" 
+                     FontSize="14"
+                     HorizontalAlignment="Center"
+                     Margin="0,0,0,10"/>
+
+            <!-- Botón convertir -->
+            <Button x:Name="button" 
+                    Content="Convertir a F°" 
+                    Width="180" Height="35" 
+                    FontSize="14" 
+                    Click="button_Click"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,10"/>
+
+            <!-- Resultado Fahrenheit -->
+            <Label Content="Grados F°" FontSize="14" HorizontalAlignment="Left" Margin="0,0,0,5"/>
+            <TextBox x:Name="textBox_Copiar" 
+                     Width="180" Height="30" 
+                     FontSize="14"
+                     IsReadOnly="True"
+                     HorizontalAlignment="Center"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
+
+

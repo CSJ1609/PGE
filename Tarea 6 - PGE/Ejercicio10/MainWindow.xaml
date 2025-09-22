@@ -1,0 +1,62 @@
+﻿<Window x:Class="Ejercicio10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Conversión de Unidades" Height="304" Width="606" Background="#FF96FCE6">
+    <Grid Background="#FFF79393" Margin="10,10,10,8">
+
+        <!-- Etiqueta valor -->
+        <TextBlock Text="Valor:" 
+                   Margin="20,20,0,0" 
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Left"
+                   FontSize="18"/>
+
+        <!-- Valor a convertir -->
+        <TextBox x:Name="textBoxValor" 
+                 HorizontalAlignment="Left" 
+                 Height="35" 
+                 Margin="100,15,0,0" 
+                 VerticalAlignment="Top" 
+                 Width="120" 
+                 FontSize="18"/>
+
+        <!-- ComboBox origen -->
+        <ComboBox x:Name="comboBoxOrigen" 
+                  HorizontalAlignment="Left" 
+                  Height="35" 
+                  Margin="240,15,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="140" 
+                  FontSize="16"/>
+
+        <!-- ComboBox destino -->
+        <ComboBox x:Name="comboBoxDestino" 
+                  HorizontalAlignment="Left" 
+                  Height="35" 
+                  Margin="400,15,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="140" 
+                  FontSize="16"/>
+
+        <!-- Botón convertir -->
+        <Button x:Name="btnConvertir" 
+                Content="Convertir" 
+                HorizontalAlignment="Center" 
+                Margin="0,80,0,0" 
+                VerticalAlignment="Top" 
+                FontSize="18" 
+                Width="140" 
+                Height="45"
+                Click="btnConvertir_Click"/>
+
+        <!-- Resultado -->
+        <TextBlock x:Name="textBlockResultado" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,160,0,0" 
+                   VerticalAlignment="Top" 
+                   FontSize="22" 
+                   Text="Resultado:" 
+                   TextAlignment="Center"/>
+    </Grid>
+</Window>
+

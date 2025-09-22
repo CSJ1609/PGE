@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CajaHerramientasSegura.MainPage"
+             Title="Calculadora Segura">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Calculadora Segura v2"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="NumberEntry"
+               Placeholder="Ingrese un número"
+               Keyboard="Numeric" />
+
+        <Button Text="Calcular Raíz Cuadrada"
+                Clicked="OnSquareRootClicked" />
+
+        <Button Text="Calcular Potencia (n^2)"
+                Clicked="OnPowerClicked" />
+
+        <Label x:Name="ResultLabel"
+               FontSize="18"
+               TextColor="DarkBlue"
+               HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
+

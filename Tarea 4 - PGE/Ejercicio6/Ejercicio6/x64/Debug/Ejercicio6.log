@@ -1,0 +1,10 @@
+﻿  Ejercicio6.cpp
+C:\Users\User\Documents\Tarea 4 - PGE\Ejercicio6\Ejercicio6.cpp(3,9): warning C4005: 'UNICODE': redefinición de macro
+      C:\Users\User\Documents\Tarea 4 - PGE\Ejercicio6\Ejercicio6.cpp(3,9):
+      'UNICODE' declarado previamente en la línea de comandos
+  
+C:\Users\User\Documents\Tarea 4 - PGE\Ejercicio6\Ejercicio6.cpp(4,9): warning C4005: '_UNICODE': redefinición de macro
+      C:\Users\User\Documents\Tarea 4 - PGE\Ejercicio6\Ejercicio6.cpp(4,9):
+      '_UNICODE' declarado previamente en la línea de comandos
+  
+  Ejercicio6.vcxproj -> C:\Users\User\Documents\Tarea 4 - PGE\Ejercicio6\x64\Debug\Ejercicio6.exe
