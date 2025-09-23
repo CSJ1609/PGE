@@ -3,7 +3,7 @@
 ## 📌 Objetivo
 Trabajo práctico en .NET MAUI para practicar excepciones, validación de entradas y registro de errores.
 
-## 🚀 Funcionalidades implementadas (parcial)
+## 🚀 Funcionalidades implementadas
 - **Calculadora Segura v2**
   - Potencia (n^2).
   - Raíz cuadrada con validación.
