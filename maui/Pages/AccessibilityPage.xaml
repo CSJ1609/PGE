@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberSpeechApp.Pages.AccessibilityPage"
+             Title="Accesibilidad">
+    <ScrollView>
+        <VerticalStackLayout Spacing="24" Padding="24">
+            <Label Text="¿Tenés algún tipo de discapacidad?"
+                   FontSize="24"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                   SemanticProperties.HeadingLevel="Level1" />
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="16" RowSpacing="16">
+                <!-- Opción: Ninguna -->
+                <Button Grid.Row="0" Grid.ColumnSpan="2"
+                        Text="No, quiero programar"
+                        Clicked="OnNoDisability"
+                        HeightRequest="56"
+                        CornerRadius="12"
+                        BackgroundColor="#22C55E" />
+
+                <!-- Opción: Visual -->
+                <Button Grid.Row="1" Grid.Column="0"
+                        Text="Apoyos Visuales"
+                        Clicked="OnVisual"
+                        HeightRequest="56"
+                        CornerRadius="12"
+                        BackgroundColor="#3B82F6" />
+
+                <!-- Opción: Auditiva / Habla -->
+                <Button Grid.Row="1" Grid.Column="1"
+                        Text="Apoyos Auditivos/Voz"
+                        Clicked="OnAuditory"
+                        HeightRequest="56"
+                        CornerRadius="12"
+                        BackgroundColor="#A78BFA" />
+            </Grid>
+
+            <Label Text="Podés cambiar estas preferencias luego en Ajustes." FontSize="12" Opacity="0.7" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

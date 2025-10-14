@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberSpeechApp.Pages.WelcomePage"
+             Title="CyberSpeech">
+    <Grid BackgroundColor="{AppThemeBinding Light=#0B2251, Dark=#0B2251}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Logo -->
+        <Image Grid.Row="0"
+               Grid.RowSpan="2"
+               Source="cyberspeech.png"
+               MaxHeightRequest="280"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               SemanticProperties.Description="Logo de CyberSpeech" />
+
+        <!-- Call to action -->
+        <VerticalStackLayout Grid.Row="1"
+                             Spacing="16"
+                             Padding="24"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
+            <Button x:Name="StartButton"
+                    Text="Tocar para empezar"
+                    SemanticProperties.Hint="Toca para continuar"
+                    Clicked="OnStartTapped"
+                    FontSize="18"
+                    HeightRequest="56"
+                    CornerRadius="12"
+                    BackgroundColor="#2DD4BF"
+                    TextColor="Black" />
+            <Label Text="O toca en cualquier parte"
+                   FontSize="12"
+                   TextColor="White"
+                   Opacity="0.8"
+                   HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+
+        <!-- Full-screen tap target -->
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnStartTapped" NumberOfTapsRequired="1" />
+        </Grid.GestureRecognizers>
+    </Grid>
+</ContentPage>

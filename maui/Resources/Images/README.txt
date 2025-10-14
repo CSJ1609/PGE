@@ -1,0 +1,1 @@
+Coloca aquí tu archivo de logo como `cyberspeech.png`. En el proyecto MAUI final, muévelo a `Resources/Images/cyberspeech.png`.

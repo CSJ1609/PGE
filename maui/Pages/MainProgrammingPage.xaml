@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CyberSpeechApp.Pages.MainProgrammingPage"
+             Title="Programación">
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <Label Text="Pantalla principal de programación"
+               FontSize="22" />
+        <Label Text="Aquí irán los editores y herramientas."
+               FontSize="14" />
+    </VerticalStackLayout>
+</ContentPage>
