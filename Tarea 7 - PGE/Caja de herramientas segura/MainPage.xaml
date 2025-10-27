@@ -1,28 +1,81 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CajaHerramientasSegura.MainPage"
-             Title="Calculadora Segura">
+             x:Class="Caja_de_herramientas_segura.MainPage"
+             Title="MainPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
 
-    <VerticalStackLayout Padding="20" Spacing="15">
-        <Label Text="Calculadora Segura v2"
-               FontSize="24"
-               HorizontalOptions="Center" />
+            <!-- Calculadora -->
+            <Label Text="Calculadora" FontAttributes="Bold" />
+            <Entry x:Name="EntryNumero1" Placeholder="Numero 1" Keyboard="Numeric"/>
+            <Entry x:Name="EntryNumero2" Placeholder="Numero 2" Keyboard="Numeric"/>
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="+" Clicked="OnSumaClicked"/>
+                <Button Text="-" Clicked="OnRestaClicked"/>
+                <Button Text="x" Clicked="OnMultiplicaClicked"/>
+                <Button Text="/" Clicked="OnDivideClicked"/>
+                <Button Text="x^y" Clicked="OnPotenciaClicked"/>
+                <Button Text="sqrt" Clicked="OnRaizClicked"/>
+            </HorizontalStackLayout>
 
-        <Entry x:Name="NumberEntry"
-               Placeholder="Ingrese un número"
-               Keyboard="Numeric" />
+            <Label x:Name="LblResultado" Text="Resultado:" />
 
-        <Button Text="Calcular Raíz Cuadrada"
-                Clicked="OnSquareRootClicked" />
+            <BoxView HeightRequest="1" Color="#DDD" Margin="0,10"/>
 
-        <Button Text="Calcular Potencia (n^2)"
-                Clicked="OnPowerClicked" />
+            <!-- Gestor de archivos -->
+            <Label Text="Gestor de archivos" FontAttributes="Bold" />
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Abrir archivo" Clicked="OnAbrirArchivoClicked"/>
+                <Button Text="Duplicar" Clicked="OnDuplicarClicked" x:Name="BtnDuplicar" IsEnabled="False"/>
+            </HorizontalStackLayout>
 
-        <Label x:Name="ResultLabel"
-               FontSize="18"
-               TextColor="DarkBlue"
-               HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            <Label Text="Archivo actual:" FontAttributes="Italic"/>
+            <Label x:Name="LblArchivoActual" Text="(ninguno)" LineBreakMode="TailTruncation"/>
+
+            <Label Text="Tamano (bytes):" FontAttributes="Italic"/>
+            <Label x:Name="LblTamano" Text="-" />
+
+            <Label Text="Fecha modificacion:" FontAttributes="Italic"/>
+            <Label x:Name="LblModificado" Text="-" />
+
+            <BoxView HeightRequest="1" Color="#DDD" Margin="0,10"/>
+
+            <!-- Login simulado -->
+            <Label Text="Login simulado" FontAttributes="Bold" />
+            <Entry x:Name="EntryUsuario" Placeholder="Usuario" />
+            <Entry x:Name="EntryPassword" Placeholder="Contrasena" IsPassword="True"/>
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Login" Clicked="OnLoginClicked" x:Name="BtnLogin"/>
+            </HorizontalStackLayout>
+            <Label x:Name="LblLoginStatus" Text="Estado: -" />
+            <Label x:Name="LblIntentos" Text="Intentos fallidos: 0" />
+
+            <BoxView HeightRequest="1" Color="#DDD" Margin="0,10"/>
+
+            <!-- Panel de excepciones -->
+            <Label Text="Panel de excepciones" FontAttributes="Bold" />
+
+            <VerticalStackLayout Spacing="6">
+                <HorizontalStackLayout Spacing="8">
+                    <Button Text="Simular NullReferenceException" Clicked="OnSimulateNullRefClicked"/>
+                    <Button Text="Ejemplo seguro (guard clause)" Clicked="OnFixNullRefClicked"/>
+                </HorizontalStackLayout>
+                <Label x:Name="LblNullAdvice"
+                       Text="Evitalo: comprueba null con guard clauses (if (obj == null) ...)."
+                       LineBreakMode="WordWrap" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="6">
+                <HorizontalStackLayout Spacing="8">
+                    <Button Text="Simular IndexOutOfRange" Clicked="OnSimulateIndexOutClicked"/>
+                    <Button Text="Ejemplo seguro (comprobar indice)" Clicked="OnFixIndexOutClicked"/>
+                </HorizontalStackLayout>
+                <Label x:Name="LblIndexAdvice"
+                       Text="Evitalo: valida indices antes de acceder (if (i >= 0 && i < arr.Length) ...)."
+                       LineBreakMode="WordWrap" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
-
